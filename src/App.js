@@ -1,12 +1,11 @@
 import "./App.css";
-
+import Weather from "./Weather";
 function App() {
   return (
     <div className="App">
       <div className="container">
-        <header className="App-header">Weather App</header>
-        <button className="btn btn-primary"> click </button>
-        <div vlassName="Footer">
+        <Weather />
+        <div className="Footer">
           <p>
             This project was coded by Tetiana Shevchuk and is {""}
             <a
