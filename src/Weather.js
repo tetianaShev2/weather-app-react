@@ -23,11 +23,13 @@ export default function Weather() {
         <li>Last updated:</li>
         <li>Description</li>
         <li>
-          <img src="" alt=""></img>
+          <img src="http://openweathermap.org/img/wn/01d@2x.png" alt=""></img>
+          <span className="temperature">16</span>
+          <span className="units">°C</span>
         </li>
-        <li>Temperature</li>
-        <li>Humidity</li>
-        <li>Wind</li>
+
+        <li>Humidity:</li>
+        <li>Wind:</li>
       </ul>
     </div>
   );
