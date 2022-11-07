@@ -19,18 +19,20 @@ export default function Weather() {
           </form>
         </div>
       </div>
-      <ul>
-        <li>Last updated:</li>
-        <li>Description</li>
-        <li>
-          <img src="http://openweathermap.org/img/wn/01d@2x.png" alt=""></img>
-          <span className="temperature">16</span>
-          <span className="units">°C</span>
-        </li>
+      <div className="today">
+        <ul>
+          <li>Last updated:</li>
+          <li>Description</li>
+          <li>
+            <img src="http://openweathermap.org/img/wn/01d@2x.png" alt=""></img>
+            <span className="temperature">16</span>
+            <span className="units">°C</span>
+          </li>
 
-        <li>Humidity:</li>
-        <li>Wind:</li>
-      </ul>
+          <li>Humidity:</li>
+          <li>Wind:</li>
+        </ul>
+      </div>
     </div>
   );
 }

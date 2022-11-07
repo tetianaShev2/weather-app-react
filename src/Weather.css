@@ -17,17 +17,6 @@
   list-style: none;
 }
 
-.today {
-  border: 1px;
-  border-radius: 10px;
-  padding: 5px;
-  max-width: 50%;
-  background: #defcf9;
-  margin: 0px 10px 10px 0px;
-  font-size: 16px;
-  font-weight: 350;
-}
-
 .Weather .temperature {
   font-size: 40px;
   font-weight: 600;
@@ -41,6 +30,17 @@
   position: relative;
   top: -20px;
   padding: 0 auto;
+}
+
+.Weather .today {
+  border: 1px;
+  border-radius: 10px;
+  padding: 5px;
+  max-width: 50%;
+  background: #defcf9;
+  margin: 0px 10px 10px 0px;
+  font-size: 16px;
+  font-weight: 350;
 }
 .forecast-date {
   font-size: 16px;
