@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import axios from "axios";
 import "./Weather.css";
+import DisplayedDate from "./DisplayedDate";
 
 export default function Weather(props) {
   const [ready, setReady] = useState(false);
@@ -10,7 +11,7 @@ export default function Weather(props) {
     setWeatherData({
       temperature: response.data.main.temp,
       city: response.data.name,
-      date: "Wednesday 7:00",
+      date: new Date(response.data.dt * 1000),
       wind: response.data.wind.speed,
       humidity: response.data.main.humidity,
       description: response.data.weather[0].description,
@@ -39,7 +40,9 @@ export default function Weather(props) {
         </div>
         <div className="today">
           <ul>
-            <li>{weatherData.date}</li>
+            <li>
+              <DisplayedDate date={weatherData.date} />
+            </li>
             <li className="text-capitalize">{weatherData.description}</li>
             <li>
               <img
@@ -57,10 +60,8 @@ export default function Weather(props) {
               {""}%
             </li>
             <li>
-              Wind:{""}
-              {weatherData.wind} {""}km/h
+              Wind:{""} {weatherData.wind} {""}km/h
             </li>
-            <li>Last updated:{weatherData.lastUpdated}</li>
           </ul>
         </div>
       </div>
