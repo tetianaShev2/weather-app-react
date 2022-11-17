@@ -1,4 +1,5 @@
 import React from "react";
+import Weather from "./Weather";
 
 export default function WeatherForecastDay(props) {
   function maxTemperature() {
@@ -16,10 +17,14 @@ export default function WeatherForecastDay(props) {
     let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
     return days[day];
   }
+
   return (
     <div>
       <div className="WeatherForecastDay">{day()}</div>
-      <img src="http://openweathermap.org/img/wn/01d@2x.png"></img>
+      <img
+        src={props.data.weather[0].icon}
+        alt={props.data.weather[0].description}
+      ></img>
       <div className="WeatherForecastTemp">
         <span className="WeatherForecastTempMax">{maxTemperature()}°</span>
         <span className="WeatherForecastTempMin">{minTemperature()}°</span>
