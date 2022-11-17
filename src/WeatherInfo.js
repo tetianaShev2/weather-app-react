@@ -12,10 +12,12 @@ export default function WeatherInfo(props) {
         </li>
         <li className="text-capitalize">{props.data.description}</li>
         <li>
-          <WeatherIcon code={props.data.icon} alt={props.data.description} />
-          <span className="temperature">
-            <WeatherTemperature celsius={props.data.temperature} />
-          </span>
+          <div className="d-flex">
+            <WeatherIcon code={props.data.icon} alt={props.data.description} />
+            <span className="temperature">
+              <WeatherTemperature celsius={props.data.temperature} />
+            </span>
+          </div>
         </li>
 
         <li>
